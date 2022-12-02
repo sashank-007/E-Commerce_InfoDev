@@ -11,11 +11,10 @@ A E-commerce platform created using Sprint Boot, JPA, Hibernate, MySQL, RESTful 
 * Google code JSON Library
 
 **Database Specification | application.properties:**
+  * Database name = ecommerce_project
+  * Database driver-class = com.mysql.cj.jdbc.Driver
 
-* Database name = ecommerce_project
-* Database driver-class = com.mysql.cj.jdbc.Driver
-
-* Default port = 8081
+>Default port = 8081
 
 **Entities**:
 * User
