@@ -1,0 +1,45 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.infodev'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.jetbrains:annotations:23.0.0'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//Dependency for SpringFox Swagger2 and Swagger-UI
+	implementation "io.springfox:springfox-boot-starter:3.0.0"
+	// Inclusion of JSON dependency -> https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+//	implementation 'io.swagger.core.v3:swagger-gradle-plugin:2.2.7'
+
+	// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+	implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+//	implementation 'io.springfox:springfox-swagger2:3.0.0'
+
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+//	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+
+	// https://mvnrepository.com/artifact/javax.validation/validation-api
+	implementation 'javax.validation:validation-api:2.0.1.Final'
+
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
